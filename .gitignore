@@ -95,6 +95,7 @@ ENV/
 .ropeproject
 
 # PyCharm
-.idea
+.idea/
+.idea/workspace.xml
 
 db.sqlite3
