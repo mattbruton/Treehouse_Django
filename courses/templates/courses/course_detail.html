@@ -8,9 +8,10 @@
         {{ course.description }}
         <section>
             {% for step in course.step_set.all %}
-                <h3>{{ step.title }}</h3>
+                <a href="{% url 'courses:step' step_pk=step.pk course_pk=course.pk %}"><h3>{{ step.title }}</h3></a>
                 {{ step.description }}
             {% endfor %}
         </section>
+        <a href="{% url 'courses:list' %}"><h5>Back to Courses</h5></a>
     </article>
 {% endblock %}
